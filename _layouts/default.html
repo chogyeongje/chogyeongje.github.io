@@ -76,7 +76,12 @@
         ga('create', '{{ site.google_analytics }}', 'auto');
         ga('send', 'pageview');
         function hide(div_id) {
-           document.getElementById(div_id).style.display = "none";
+          console.log(div_id);
+          if (document.getElementById(div_id).style.display === "none") {
+            document.getElementById(div_id).style.display = "block";
+          } else {
+            document.getElementById(div_id).style.display = "none";
+          }
         }
       </script>
     {% endif %}
