@@ -38,7 +38,7 @@
 
         <aside id="sidebar">
           {% for tag in site.tags %}
-            <button onclick="hide('{tag[0]}')", style="background:none;border:none;">{{ tag[0] }}</button>
+            <button onclick="hide('{{ tag[0] }}')", style="background:none;border:none;">{{ tag[0] }}</button>
             <div id="{{ tag[0] }}">
               <ul>
                 {% for post in tag[1] %}
