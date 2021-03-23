@@ -32,25 +32,20 @@
 
     <div id="content-wrapper">
       <div class="inner clearfix">
-	  	<ul>
-        {% for post in site.posts %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
         <section id="main-content">
           {{ content }}
         </section>
 
         <aside id="sidebar">
           {% for tag in site.tags %}
-            <h3>{{ tag[0] }}</h3>
-            <ul>
-              {% for post in tag[1] %}
-                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-              {% endfor %}
-            </ul>
+            <h3 onclick="hide(tag[0])">{{ tag[0] }}</h3>
+            <div id="{{ tag[0] }}">
+              <ul>
+                {% for post in tag[1] %}
+                  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
           {% endfor %}
           {% if site.show_downloads %}
             <a href="{{ site.github.zip_url }}" class="button">
@@ -80,6 +75,9 @@
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create', '{{ site.google_analytics }}', 'auto');
         ga('send', 'pageview');
+        function hide(div_id) {
+           document.getElementById(div_id).style.display = "none";
+        }
       </script>
     {% endif %}
   </body>
