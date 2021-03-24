@@ -37,11 +37,11 @@
         </section>
 
         <aside id="sidebar">
-          {% for tag in site.tags %}
-            <button onclick="hide('{{ tag[0] }}')", style="background:none;border:none;font-size: 1.5em;font-weight: bold;">{{ tag[0] }}</button>
-            <div id="{{ tag[0] }}", style="display: none;">
+          {% for category in site.categories %}
+            <button onclick="hide('{{ category[0] }}')", style="background:none;border:none;font-size: 1.5em;font-weight: bold;">{{ category[0] }}</button>
+            <div id="{{ category[0] }}", style="display: none;">
               <ul>
-                {% for post in tag[1] %}
+                {% for post in category[1] %}
                   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
                 {% endfor %}
               </ul>
