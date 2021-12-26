@@ -2,6 +2,8 @@
 layout: post
 title: "[HoloLens2] PhotoCapture 적용"
 image: /assets/img/hololens2_logo.jpeg
+category: devlog
+tags: hololens2
 ---
 
 * toc

@@ -1,6 +1,9 @@
 ---
-ayout: about
-title: Profile
+layout: welcome
+title: About
+permalink: /about/
+sidebar: true
+order: 1
 ---
 
 ## Research
@@ -14,5 +17,3 @@ title: Profile
 *Mar 2015 - Feb 2021* : B.S. in Mathmatics, Seoul National University
 
 *Mar 2021 - present* : M.S in Data Science, Seoul National University
-
-<!--author-->

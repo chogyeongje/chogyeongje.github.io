@@ -2,6 +2,8 @@
 layout: post
 title: "[HoloLens2] 프로젝트 생성"
 image: /assets/img/hololens2_logo.jpeg
+category: devlog
+tags: hololens2
 ---
 
 * toc
